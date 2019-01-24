@@ -8,7 +8,7 @@ The [dataset](dataset) folder contains the `json` files for the questions and an
 We provide a simple script and a exmaple prediction json file under the [eval](eval) folder to calculate the accuracy per type.  
 
 `
-python eval/eval.py --pred_file /eval/pred_val_examples.json --gt_file /dataset/val_a.json
+python evaluation/eval.py --pred_file evaluation/pred_val_example.json --gt_file dataset/val_a.json
 `
 
 ## Licence

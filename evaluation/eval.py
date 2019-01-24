@@ -41,9 +41,9 @@ def output(corrects, type_count):
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pred_json', type=str, default='/data1/yuting/esa_test1/valpred.json',
+    parser.add_argument('--pred_file', type=str, default='evaluation/pred_val_example.json',
                         help='path to the json file containing your prediction')
-    parser.add_argument('--result_json', type=str, default='/data1/yuting/ActivityNetQA/val_a.json',
+    parser.add_argument('--gt_file', type=str, default='dataset/val_a.json',
                         help='path to the json file containing the ground true')
     args = parser.parse_args()
     return args
@@ -51,7 +51,7 @@ def parse_opt():
 
 if __name__ == '__main__':
     opt = parse_opt()
-    preds = json.load(open(opt.pred_json, 'r'))
-    results = json.load(open(opt.result_json, 'r'))
+    preds = json.load(open(opt.pred_file, 'r'))
+    results = json.load(open(opt.gt_file, 'r'))
     corrects, type_count = eval(preds, results)
     output(corrects, type_count)
