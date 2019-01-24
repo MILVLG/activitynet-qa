@@ -14,7 +14,7 @@ The code and the dataset are distributed under MIT LICENSE. They are only allowe
 If the project are helpful for your research, please cite
 
 ```
-@inproceedings{yu-AAAI-2019,
+@inproceedings{yu2019activityqa,
     author    = {Yu, Zhou and Xu, Dejing and Yu, Jun and Yu, Ting and Zhao, Zhou and Zhuang, Yueting and Tao, Dacheng},
     title     = {ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering},
     booktitle = {AAAI},
