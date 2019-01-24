@@ -2,7 +2,7 @@ import argparse
 import json
 
 
-def stastic(preds, results):
+def eval(preds, results):
     corrects = {i: 0 for i in range(0, 9)}
 
     result_d = {}
@@ -34,15 +34,16 @@ def output(corrects, type_count):
     all_type_accuracy = all_type_corrects_count / float(sum(type_count.values()))
 
     free_type_accuracy = free_type_corrects_count / float(sum(list(type_count.values())[3:]))
-
-    print('Motion: {:.04f}, Spat.Rel.: {:.04f}, Temp.Rel.: {:.04f}, Free: {:.04f}, All: {:.04f}'.format(accuracy[0], accuracy[1], accuracy[2], free_type_accuracy, all_type_accuracy))
-    print('Yes/No: {:.04f}, Color: {:.04f}, Object: {:.04f}, Location: {:.04f}, Number: {:.04f}, Other: {:.04f}'.format(accuracy[3], accuracy[4], accuracy[5], accuracy[6], accuracy[7], accuracy[8]))
+    print ('Accuracy (per question type):')
+    print('\tMotion: {:.04f}\n\tSpatial Relation: {:.04f}\n\tTemporal Relation: {:.04f}\n\tFree: {:.04f}\n\tAll: {:.04f}'.format(accuracy[0], accuracy[1], accuracy[2], free_type_accuracy, all_type_accuracy))
+    print ('Accuracy of the Free type questions(per answer type):')
+    print('\tYes/No: {:.04f}\n\tColor: {:.04f}\n\tObject: {:.04f}\n\tLocation: {:.04f}\n\tNumber: {:.04f}\n\tOther: {:.04f}'.format(accuracy[3], accuracy[4], accuracy[5], accuracy[6], accuracy[7], accuracy[8]))
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pred_json', type=str, default='/data1/yuting/esa_test1/valpred.json',
+    parser.add_argument('--pred_file', type=str, default='evaluation/pred_val_example.json',
                         help='path to the json file containing your prediction')
-    parser.add_argument('--result_json', type=str, default='/data1/yuting/ActivityNetQA/val_a.json',
+    parser.add_argument('--gt_file', type=str, default='dataset/val_a.json',
                         help='path to the json file containing the ground true')
     args = parser.parse_args()
     return args
@@ -50,7 +51,7 @@ def parse_opt():
 
 if __name__ == '__main__':
     opt = parse_opt()
-    preds = json.load(open(opt.pred_json, 'r'))
-    results = json.load(open(opt.result_json, 'r'))
-    corrects, type_count = stastic(preds, results)
+    preds = json.load(open(opt.pred_file, 'r'))
+    results = json.load(open(opt.gt_file, 'r'))
+    corrects, type_count = eval(preds, results)
     output(corrects, type_count)
