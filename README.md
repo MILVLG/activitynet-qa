@@ -1,14 +1,22 @@
-# activitynet-qa
-The ActivityNet-QA dataset contains 58,000 QA pairs on 5,800 complex web videos derived from the popular ActivityNet dataset. The question & answer pairs are collected via human crowdsourcing. The dataset can be used to understand complex web videos via Question Answering techniques. 
+# Activitynet-QA
+The ActivityNet-QA dataset contains 58,000 human-annotated QA pairs on 5,800 videos derived from the popular ActivityNet dataset. The dataset provides a benckmark for testing the performance of VideoQA models on long-term spatio-temporal reasoning. 
 
-In this repository, you can find the [val](val/README.md) and the [dataset](dataset/README.md) for our **AAAI 2019** paper: **ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering**.
+## Dataset
 
-The code and the dataset are free to use for academic purposes only. If you use any of the material in this repository as part of your work, we ask you to cite:
+## Evaluation
+
+## Licence
+
+The code and the dataset are distributed under MIT LICENSE. They are only allowed for non-commercial use.
+
+## Citation
+
+If the project are helpful for your research, please cite
 
 ```
 @inproceedings{yu-AAAI-2019,
-    author    = {Zhou Yu and Deijng Xu and Jun Yu and Ting Yu and Zhou Zhao and Yueting Zhuang},
-    title     = "{ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering}"
+    author    = {Yu, Zhou and Xu, Dejing and Yu, Jun and Yu, Ting and Zhao, Zhou and Zhuang, Yueting and Tao, Dacheng},
+    title     = {ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering},
     booktitle = {AAAI},
     year      = 2019
 }
