@@ -1,9 +1,9 @@
 # Dataset
 
 ## Splits
-train: 38,000 QA pairs on 3,800 videos
+train: 32,000 QA pairs on 3,200 videos
 
-val: 12,000 QA pairs on 1,200 videos
+val: 18,000 QA pairs on 1,800 videos
 
 test: 8,000 QA pairs on 800 videos
 
