@@ -34,8 +34,8 @@ All the answers are stored in the `*_a.json` files. Each entry in the file is of
 The `answer` field contains the answer with respect to the question with `question_id`
 The `type` file contains the question or answer types for this question: 
 
-Question types: [0]. Motion  [1]. Spatial Relationship  [2]. Temporal Relationship  [3-8]. Free
+Question types: [0].Motion  [1].Spatial Relationship  [2].Temporal Relationship  [3-8].Free
 
-Answer types: [3]. Yes/No  [4]. Color  [5]. Object  [6]. Location  [7]. Number  [8]. Other
+Answer types: [3].Yes/No  [4].Color  [5].Object  [6].Location  [7].Number  [8].Other
 
 
