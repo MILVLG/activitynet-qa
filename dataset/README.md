@@ -21,7 +21,7 @@ The `video_name` field corresponds to the orginal video id in the ActivityNet da
 
 
 ## Answer Format
-All the answers are stored in the `*_a.json` files. Each entry in the file is of the following format. Note that we temporarily do not provide the `test_a.json` file and consider to provide a evaluation server to test the predictions online. 
+All the answers are stored in the `*_a.json` files. Each entry in the file is of the following format. 
 
 ```
 {
