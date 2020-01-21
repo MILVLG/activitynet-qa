@@ -21,10 +21,11 @@ If the project are helpful for your research, please cite
 
 ```
 @inproceedings{yu2019activityqa,
-    author    = {Yu, Zhou and Xu, Dejing and Yu, Jun and Yu, Ting and Zhao, Zhou and Zhuang, Yueting and Tao, Dacheng},
-    title     = {ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering},
+    author = {Yu, Zhou and Xu, Dejing and Yu, Jun and Yu, Ting and Zhao, Zhou and Zhuang, Yueting and Tao, Dacheng},
+    title = {ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering},
     booktitle = {AAAI},
-    year      = {2019}
+    pages = {9127--9134},
+    year = {2019}
 }
 ```
 
